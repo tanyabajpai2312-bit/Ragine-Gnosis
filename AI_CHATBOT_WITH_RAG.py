@@ -29,7 +29,7 @@ for message in st.session_state.messages:
       
 @st.cache_resource
 def get_vectorstore():
-        pdf_name="./stockpredictionproject.py"
+        pdf_name="C:\Users\tanya\OneDrive\Documents\Desktop\Data\Gale Encyclopedia of Medicine 1.pdf"
         loaders=[PyPDFLoader(pdf_name)]
           # Create chunks,ka vectors(Chromadb)
         index=VectorstoreIndexCreator(
@@ -69,4 +69,5 @@ if prompt:
     except Exception as e:
         st.error(f"Error: {str(e)}")
      
+
 
